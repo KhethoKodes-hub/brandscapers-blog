@@ -19,7 +19,9 @@ app.use(express.json({ limit: '15mb' }));
 app.use(express.urlencoded({ extended: true }));
 
 // CORS
-app.use(cors());
+app.use(cors({
+  origin: ['https://brandscapers-blog-frontend.vercel.app'],
+}));
 
 // Rate limiter
 const limiter = rateLimit({
@@ -29,8 +31,8 @@ const limiter = rateLimit({
 app.use(limiter);
 
 // Routes
-app.use('/api/posts', postRoutes);
-app.use('/api/auth', authRoutes);
+app.use('/api/posts', require('./routes/posts'));
+app.use('/api/auth', require('./routes/auth'));
 
 // Root route
 app.get('/', (req, res) => res.json({ msg: 'Brandscapers Blog API running 🚀' }));
