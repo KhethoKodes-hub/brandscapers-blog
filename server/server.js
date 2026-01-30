@@ -50,6 +50,7 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
     console.error('DB connection error:', err && err.message ? err.message : err);
     console.warn('Continuing to start server without DB connection (dev only).');
     // Start the server anyway so you can test endpoints that don't require DB
-    app.listen(PORT, () => console.log('Server running on port', PORT, '(without DB)'));
-  });
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});  });
 
