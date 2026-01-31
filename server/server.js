@@ -38,11 +38,12 @@ app.get('/', (req, res) => res.json({ msg: 'Brandscapers Blog API running 🚀' 
 // PORT from Render
 const PORT = process.env.PORT || 5050;
 
-// Connect DB if available
+/// Connect DB if available
 if (process.env.MONGO_URI) {
-  mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('MongoDB connected'))
-    .catch(err => console.error('DB connection error:', err.message));
+  mongoose
+    .connect(process.env.MONGO_URI)
+    .then(() => console.log('MongoDB connected ✅'))
+    .catch((err) => console.error('MongoDB connection error ❌', err));
 }
 
 // Start server (only once!)
