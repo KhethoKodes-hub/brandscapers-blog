@@ -7,7 +7,10 @@ const ADMINS = [
   'kmngomezulu82@gmail.com',
   'mv@test.com',
   'macdonald.k@brandscapersafrica.com',
-  'test@test.com'
+  'test@test.com',
+  'norma.n@brandscapersafrica.com'
+
+
   
 ];
 

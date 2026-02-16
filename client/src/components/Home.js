@@ -11,13 +11,12 @@ export default function Home() {
   useEffect(() => {
     async function load() {
       try {
-        const res = await API.get('/posts');
-        setPosts(res.data);
+const res = await API.get('/posts');        setPosts(res.data);
       } catch (err) {
         console.error(err);
       } finally {
         setLoading(false);
-      }
+      } 
     }
     load();
   }, []);
