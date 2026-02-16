@@ -8,10 +8,8 @@ const ADMINS = [
   'mv@test.com',
   'macdonald.k@brandscapersafrica.com',
   'test@test.com',
-  'norma.n@brandscapersafrica.com'
-
-
-  
+  'norma.n@brandscapersafrica.com',
+  'macdonald.k@brandscapersafrica.com'
 ];
 
 async function verifyAdmin(req, res, next) {
